@@ -4,6 +4,7 @@ let currentPage=1;
 const movieList = document.getElementById("movies-list");
 async function fetchMovies(page) {
     try {
+        
        const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=f531333d637d0c44abc85b3e74db2186&language=en-US&page=${page}`);
        const result = await response.json();
         movies = result.results;
